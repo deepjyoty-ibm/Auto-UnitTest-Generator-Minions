@@ -1,0 +1,25 @@
+{
+  "ai": {
+    "provider": "openai",
+    "apiKey": "env:OPENAI_API_KEY",
+    "model": "gpt-4o",
+    "temperature": 0.2
+  },
+  "testFramework": {
+    "type": "xunit",
+    "mockingLibrary": "Moq",
+    "assertionLibrary": "FluentAssertions"
+  },
+  "coverage": {
+    "target": 90,
+    "maxAttempts": 3
+  },
+  "reviewer": {
+    "strictMode": true
+  },
+  "generation": {
+    "generateAsyncTests": true,
+    "generateExceptionTests": true,
+    "generateEdgeCases": true
+  }
+}

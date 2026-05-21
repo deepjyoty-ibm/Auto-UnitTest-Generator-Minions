@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/SandboxExample/">
+    <Project Path="SandboxExample/SampleConsoleApp.Tests/SampleConsoleApp.Tests.csproj" Id="5c55f42d-c24b-44c4-8457-84fa96b3d30b" />
+    <Project Path="SandboxExample/SampleConsoleApp/SampleConsoleApp.csproj" Id="9497327b-35d7-4511-b802-d76993224393" />
+  </Folder>
+  <Project Path="Auto-UnitTest-Generator.Cli/Auto-UnitTest-Generator.Cli.csproj" />
+  <Project Path="Auto-UnitTest-Generator.Infrastructure/Auto-UnitTest-Generator.Infrastructure.csproj" />
+</Solution>

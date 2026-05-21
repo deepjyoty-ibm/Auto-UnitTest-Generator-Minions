@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net10.0</TargetFramework>
+		<RootNamespace>Auto_UnitTest_Generator.Cli</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<!-- CLI Tool Settings -->
+		<PackAsTool>true</PackAsTool>
+		<ToolCommandName>autounittest</ToolCommandName>
+		<PackageOutputPath>./nupkg</PackageOutputPath>
+
+		<!-- NuGet Package Metadata -->
+		<PackageId>Auto-UnitTest-Generator.cli</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Nagarajan S,Deepjyoty Roy,Ramkumar T,AbdulHameed Sayed</Authors>
+		<Company>IBM</Company>
+		<Description>AI-powered unit test generator CLI tool with multi-agent orchestration. Generates high-coverage unit tests for C# code using OpenAI/Groq AI.</Description>
+		<PackageTags>unit-testing;ai;code-generation;dotnet-tool;cli</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Auto-UnitTest-Generator.Infrastructure\Auto-UnitTest-Generator.Infrastructure.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Include config file in the package -->
+		<Content Include="autounittest.config.json">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<PackagePath>tools/net10.0/any/</PackagePath>
+			<Pack>true</Pack>
+		</Content>
+	</ItemGroup>
+
+</Project>
